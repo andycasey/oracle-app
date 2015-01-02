@@ -2,6 +2,7 @@
 # Imports
 #----------------------------------------------------------------------------#
 
+import os
 from flask import Flask, render_template, request
 # from flask.ext.sqlalchemy import SQLAlchemy
 import logging
@@ -100,4 +101,4 @@ if not app.debug:
 
 # Or specify port manually:
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
+    app.run(host='0.0.0.0', port=os.environ.get('PORT', 5000))
