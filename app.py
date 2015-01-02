@@ -18,9 +18,11 @@ app.config.from_object('config')
 db = SQLAlchemy(app)
 
 # Automatically tear down SQLAlchemy.
+'''
 @app.teardown_request
 def shutdown_session(exception=None):
     db_session.remove()
+'''
 
 # Login required decorator.
 def login_required(test):
